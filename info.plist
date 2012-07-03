@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>xbra@xbrachag.ay</string>
+	<key>contactName</key>
+	<string>Koen Punt</string>
+	<key>description</key>
+	<string>Smarty Bundle</string>
+	<key>name</key>
+	<string>Smarty</string>
+	<key>uuid</key>
+	<string>1E7A5722-A2B2-4BD2-A804-9956931DEA4B</string>
+</dict>
+</plist>
