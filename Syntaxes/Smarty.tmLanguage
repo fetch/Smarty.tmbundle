@@ -13,7 +13,7 @@
 	<string>(&lt;/(?i:(block|head|table|tr|div|style|script|ul|ol|form|dl|h1|h2|ul|ol|li))&gt;|\{\{?/(if|foreach|capture|literal|foreach|php|section|strip)|(^|\s)\})</string>
 	<key>injections</key>
 	<dict>
-		<key>source.smarty</key>
+		<key>text.html.smarty</key>
 		<dict>
 			<key>patterns</key>
 			<array>
@@ -34,8 +34,51 @@
 					<string>comment.block.smarty</string>
 				</dict>
 				<dict>
+					<key>begin</key>
+					<string>(\&lt;\%)</string>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.section.embedded.smarty</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>source.smarty</string>
+					<key>end</key>
+					<string>(\%\&gt;)</string>
+					<key>name</key>
+					<string>meta.embedded.block.smarty</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#language</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>name</key>
+	<string>Smarty</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>text.html.basic</string>
+		</dict>
+	</array>
+	<key>repository</key>
+	<dict>
+		<key>language</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
 					<key>match</key>
-					<string>\b(if|else|elseif|foreach|as|foreachelse|section)\b</string>
+					<string>\b(if|else|elseif|foreach|foreachelse|section)\b</string>
 					<key>name</key>
 					<string>keyword.control.smarty</string>
 				</dict>
@@ -59,9 +102,9 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(and|or)\b</string>
+					<string>(?i)(!|&amp;&amp;|\|\|)|\b(and|or|as)\b</string>
 					<key>name</key>
-					<string>keyword.operator.smarty</string>
+					<string>keyword.operator.logical.smarty</string>
 				</dict>
 				<dict>
 					<key>match</key>
@@ -184,17 +227,8 @@
 			</array>
 		</dict>
 	</dict>
-	<key>name</key>
-	<string>Smarty</string>
-	<key>patterns</key>
-	<array>
-		<dict>
-			<key>include</key>
-			<string>text.html.basic</string>
-		</dict>
-	</array>
 	<key>scopeName</key>
-	<string>source.smarty</string>
+	<string>text.html.smarty</string>
 	<key>uuid</key>
 	<string>4D6BBA54-E3FC-4296-9CA1-662B2AD537C6</string>
 </dict>
