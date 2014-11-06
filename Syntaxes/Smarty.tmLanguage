@@ -120,6 +120,12 @@
 				</dict>
 				<dict>
 					<key>match</key>
+					<string>\b(render)\b</string>
+					<key>name</key>
+					<string>support.function.fetch-cms.view</string>
+				</dict>
+				<dict>
+					<key>match</key>
 					<string>\b[a-zA-Z]+=</string>
 					<key>name</key>
 					<string>meta.attribute.smarty</string>
